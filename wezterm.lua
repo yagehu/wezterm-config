@@ -5,6 +5,8 @@ if wezterm.target_triple == "aarch64-apple-darwin" then
   nu = "/opt/homebrew/bin/nu"
 elseif wezterm.target_triple == "x86_64-apple-darwin" then
   nu = "/usr/local/bin/nu"
+else
+  nu = "nu"
 end
 
 config.default_prog = { nu }
