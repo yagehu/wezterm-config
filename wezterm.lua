@@ -13,7 +13,60 @@ config.default_prog = { nu }
 config.font = wezterm.font "Fira Code"
 config.font_size = 16
 config.color_scheme = 'Catppuccin Latte'
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.8
+
+config.ssh_domains = {
+  {
+    name = "blaster",
+    remote_address = "blaster.cs.uga.edu",
+    -- The username to use on the remote host
+    -- username = 'huyage',
+  },
+}
+
+config.leader = { key = "a", mods = "CTRL" }
+config.keys = {
+  {
+    key = "h",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.ActivatePaneDirection("Left"),
+  },
+  {
+    key = "j",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.ActivatePaneDirection("Down"),
+  },
+  {
+    key = "k",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.ActivatePaneDirection("Up"),
+  },
+  {
+    key = "l",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.ActivatePaneDirection("Right"),
+  },
+  {
+    key = "H",
+    mods = "LEADER",
+    action = wezterm.action.AdjustPaneSize { "Left", 5 },
+  },
+  {
+    key = "J",
+    mods = "LEADER",
+    action = wezterm.action.AdjustPaneSize { "Down", 5 },
+  },
+  {
+    key = "K",
+    mods = "LEADER",
+    action = wezterm.action.AdjustPaneSize { "Up", 5 }
+  },
+  {
+    key = "L",
+    mods = "LEADER",
+    action = wezterm.action.AdjustPaneSize { "Right", 5 },
+  },
+}
 
 return config
 
