@@ -15,6 +15,19 @@ config.font_size = 16
 config.color_scheme = 'Catppuccin Latte'
 config.window_background_opacity = 0.8
 
+config.mouse_bindings = {
+  {
+    event = { Down = { streak = 1, button = { WheelUp = 1 } } },
+    mods = "NONE",
+    action = wezterm.action.ScrollByLine(-1),
+  },
+  {
+    event = { Down = { streak = 1, button = { WheelDown = 1 } } },
+    mods = "NONE",
+    action = wezterm.action.ScrollByLine(1),
+  },
+}
+
 config.ssh_domains = {
   {
     name = "blaster",
