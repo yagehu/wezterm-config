@@ -60,6 +60,11 @@ config.keys = {
     action = wezterm.action.ActivatePaneDirection("Right"),
   },
   {
+    key = "a",
+    mods = "LEADER|CTRL",
+    action = wezterm.action.SendKey { key = "a", mods = "CTRL" },
+  },
+  {
     key = "H",
     mods = "LEADER",
     action = wezterm.action.AdjustPaneSize { "Left", 5 },
