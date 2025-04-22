@@ -13,7 +13,7 @@ config.default_prog = { nu }
 config.font = wezterm.font "Fira Code"
 config.font_size = 16
 config.color_scheme = 'Catppuccin Latte'
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 
 config.mouse_bindings = {
   {
